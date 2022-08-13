@@ -5,4 +5,13 @@
 //  Created by Mahmoud on 8/13/22.
 //
 
-import Foundation
+import UIKit
+
+struct CountriesModel {
+    
+    var flag        : UIImage?
+    var countryName : String?
+    var countryCode : String?
+    
+}
+

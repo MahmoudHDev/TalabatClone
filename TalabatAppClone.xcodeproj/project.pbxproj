@@ -15,6 +15,11 @@
 		1E130AAD28A6C16200D098D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E130AAB28A6C16200D098D0 /* LaunchScreen.storyboard */; };
 		1E130AB928A6C27800D098D0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E130AB828A6C27800D098D0 /* Colors.xcassets */; };
 		1E2C34FB28A7A577004E6B87 /* Lunch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C34FA28A7A577004E6B87 /* Lunch.mp4 */; };
+		1E2C350028A7C41B004E6B87 /* Countries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C34FF28A7C41B004E6B87 /* Countries.storyboard */; };
+		1E2C350628A7C490004E6B87 /* ContriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C350528A7C490004E6B87 /* ContriesTableViewController.swift */; };
+		1E2C350A28A7C6BC004E6B87 /* CountriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C350828A7C6BC004E6B87 /* CountriesTableViewCell.swift */; };
+		1E2C350B28A7C6BD004E6B87 /* CountriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2C350928A7C6BC004E6B87 /* CountriesTableViewCell.xib */; };
+		1E2C351028A7D43E004E6B87 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2C350F28A7D43E004E6B87 /* CountriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		1E130AAE28A6C16200D098D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E130AB828A6C27800D098D0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1E2C34FA28A7A577004E6B87 /* Lunch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lunch.mp4; sourceTree = "<group>"; };
+		1E2C34FF28A7C41B004E6B87 /* Countries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Countries.storyboard; sourceTree = "<group>"; };
+		1E2C350528A7C490004E6B87 /* ContriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContriesTableViewController.swift; sourceTree = "<group>"; };
+		1E2C350828A7C6BC004E6B87 /* CountriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewCell.swift; sourceTree = "<group>"; };
+		1E2C350928A7C6BC004E6B87 /* CountriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountriesTableViewCell.xib; sourceTree = "<group>"; };
+		1E2C350F28A7D43E004E6B87 /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				1E130ABE28A6C31A00D098D0 /* MainView */,
+				1E2C350228A7C444004E6B87 /* CountriesView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -100,8 +111,9 @@
 		1E130ABF28A6C32900D098D0 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				1E130AA628A6C15E00D098D0 /* Main.storyboard */,
 				1E130AAB28A6C16200D098D0 /* LaunchScreen.storyboard */,
+				1E130AA628A6C15E00D098D0 /* Main.storyboard */,
+				1E2C34FF28A7C41B004E6B87 /* Countries.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -119,6 +131,33 @@
 			children = (
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1E2C350228A7C444004E6B87 /* CountriesView */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C350E28A7D430004E6B87 /* Model */,
+				1E2C350328A7C451004E6B87 /* View */,
+			);
+			path = CountriesView;
+			sourceTree = "<group>";
+		};
+		1E2C350328A7C451004E6B87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C350528A7C490004E6B87 /* ContriesTableViewController.swift */,
+				1E2C350828A7C6BC004E6B87 /* CountriesTableViewCell.swift */,
+				1E2C350928A7C6BC004E6B87 /* CountriesTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E2C350E28A7D430004E6B87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C350F28A7D43E004E6B87 /* CountriesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +219,9 @@
 			files = (
 				1E130AAD28A6C16200D098D0 /* LaunchScreen.storyboard in Resources */,
 				1E130AB928A6C27800D098D0 /* Colors.xcassets in Resources */,
+				1E2C350B28A7C6BD004E6B87 /* CountriesTableViewCell.xib in Resources */,
 				1E130AAA28A6C16200D098D0 /* Assets.xcassets in Resources */,
+				1E2C350028A7C41B004E6B87 /* Countries.storyboard in Resources */,
 				1E2C34FB28A7A577004E6B87 /* Lunch.mp4 in Resources */,
 				1E130AA828A6C15E00D098D0 /* Main.storyboard in Resources */,
 			);
@@ -195,7 +236,10 @@
 			files = (
 				1E130AA528A6C15E00D098D0 /* MainViewController.swift in Sources */,
 				1E130AA128A6C15E00D098D0 /* AppDelegate.swift in Sources */,
+				1E2C350628A7C490004E6B87 /* ContriesTableViewController.swift in Sources */,
 				1E130AA328A6C15E00D098D0 /* SceneDelegate.swift in Sources */,
+				1E2C351028A7D43E004E6B87 /* CountriesModel.swift in Sources */,
+				1E2C350A28A7C6BC004E6B87 /* CountriesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

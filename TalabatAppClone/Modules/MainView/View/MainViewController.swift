@@ -25,6 +25,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUI()
+        navigationController?.isNavigationBarHidden = true
+        navigationController?.navigationBar.isHidden = true
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,10 +61,14 @@ class MainViewController: UIViewController {
 
     @IBAction private func autoLocationBtn(_ sender: UIButton) {
      print("CLocationManager")
+        // Detect the location and insert it to the phone number
     }
     
     @IBAction private func manualLocationBtn(_ sender: UIButton) {
         print("Show Maps")
+        let storyBoard = UIStoryboard(name: "Countries", bundle: nil).instantiateViewController(identifier: "CountriesView")
+
+        self.navigationController?.pushViewController(storyBoard, animated: true)
     }
 
 }
