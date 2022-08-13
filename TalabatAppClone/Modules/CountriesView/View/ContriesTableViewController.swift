@@ -69,5 +69,14 @@ class ContriesTableViewController: UITableViewController {
         return cell
     }
 
+    //MARK:- Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCountry = countries[indexPath.row]
+        
+        let storyBoard = UIStoryboard(name: "Information", bundle: nil).instantiateViewController(identifier: "InformationView") as! InformationViewController
+        storyBoard.country = selectedCountry
+        self.navigationController?.pushViewController(storyBoard, animated: true)
+    }
 
 }
