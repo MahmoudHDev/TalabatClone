@@ -29,9 +29,15 @@ class InformationViewController: UIViewController {
 
     
     //MARK:- Properties
-    var presenter: InformationPresenterView?
-    var country: CountriesModel?
-    
+    var presenter   : InformationPresenterView?
+    var country     : CountriesModel?
+    var canSeePass  : Bool = true
+    private let dummyDatabase = [User(email: "admin@admin.com", password: "password")]
+    var sceneDelegate: SceneDelegate? {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let delegate = windowScene.delegate as? SceneDelegate else { return nil }
+        return delegate
+    }
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,16 +69,51 @@ class InformationViewController: UIViewController {
         usernameTextField.setLeftPaddingPoints(20)
         passwordTextField.setLeftPaddingPoints(20)
         
+        passwordTextField.isSecureTextEntry = true
+        
+        
+        usernameTextField.text = "admin@admin.com"
+        passwordTextField.text = "password"
     }
     
     private func buttonsStyle() {
         loginBtn.layer.cornerRadius = 25
+
     }
     
     //MARK:- Actions
     
     @IBAction func loginBttn(_ sender: UIButton)  {
-        print("Login button")
+        // Login to database...
+        let email       = self.usernameTextField.text ?? ""
+        let password    = self.passwordTextField.text ?? ""
+        if let user = dummyDatabase.first(where: { user in
+            user.email == email && user.password == password
+        }) {
+            print("hi \(user.email)")
+            if let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeView") as? UITabBarController {
+                UserDefaults.standard.set(true, forKey: "isFirstLogin")
+                if #available(iOS 13.0, *) {
+                    self.sceneDelegate?.window?.rootViewController = homeVC
+                    self.sceneDelegate?.window?.makeKeyAndVisible()
+                } else {
+                    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                    appdelegate.window!.rootViewController = homeVC
+                }
+            }
+        }
+    }
+    
+    @IBAction func seePassBttn() {
+        if canSeePass {
+            passwordTextField.isSecureTextEntry = false
+            seePasswordBtn.setImage(UIImage(systemName: "eye.fill")!, for: .normal)
+        } else {
+            passwordTextField.isSecureTextEntry = true
+            seePasswordBtn.setImage(UIImage(systemName: "eye.slash.fill")!, for: .normal)
+        }
+        
+        canSeePass = !canSeePass
     }
     
     @IBAction func forgetPassBttn(_ sender: UIButton)  {
@@ -82,6 +123,8 @@ class InformationViewController: UIViewController {
     @IBAction func regBtn(_ sender: UIButton)  {
         print("register Button")
     }
+    
+    
 }
 
 //MARK:- Presenter

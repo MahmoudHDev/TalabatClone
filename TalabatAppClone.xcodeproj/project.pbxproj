@@ -28,6 +28,7 @@
 		1E2CC87B28A98C13000C0C51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC87A28A98C13000C0C51 /* HomeViewController.swift */; };
 		1E2CC87E28A98D5F000C0C51 /* InformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC87D28A98D5F000C0C51 /* InformationPresenter.swift */; };
 		1E2CC88128A98EEB000C0C51 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */; };
+		1E8616F828AAACF300F85D4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8616F728AAACF300F85D4C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		1E2CC87A28A98C13000C0C51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1E2CC87D28A98D5F000C0C51 /* InformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPresenter.swift; sourceTree = "<group>"; };
 		1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		1E8616F728AAACF300F85D4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		1E162D4928A82638009A600A /* InformationView */ = {
 			isa = PBXGroup;
 			children = (
+				1E8616F628AAACE200F85D4C /* Model */,
 				1E162D4B28A82658009A600A /* View */,
 				1E162D4A28A82653009A600A /* Presenter */,
 			);
@@ -248,6 +251,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		1E8616F628AAACE200F85D4C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1E8616F728AAACF300F85D4C /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8616F828AAACF300F85D4C /* User.swift in Sources */,
 				1E130AA528A6C15E00D098D0 /* MainViewController.swift in Sources */,
 				1E162D5628A83007009A600A /* TextFieldPadding.swift in Sources */,
 				1E130AA128A6C15E00D098D0 /* AppDelegate.swift in Sources */,

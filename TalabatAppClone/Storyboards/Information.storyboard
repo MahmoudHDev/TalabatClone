@@ -115,6 +115,9 @@
                                                                                 </constraints>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <state key="normal" image="eye.slash.fill" catalog="system"/>
+                                                                                <connections>
+                                                                                    <action selector="seePassBttn" destination="cle-lW-lSJ" eventType="touchUpInside" id="Iyu-Od-bxF"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
