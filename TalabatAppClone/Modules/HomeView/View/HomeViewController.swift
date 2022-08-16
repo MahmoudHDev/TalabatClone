@@ -13,7 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var offerDescLbl         : UILabel!
     @IBOutlet weak var offerBtn             : UIButton!
     @IBOutlet weak var topCollectionView    : UICollectionView!
-    
+    @IBOutlet weak var offersCollectionView : UICollectionView!
+
     //MARK:- Properties
     var presenter       : HomePresenterView?
     var arrCatgories    = [CatgoriesModel]()
@@ -23,6 +24,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         presenter = HomePresenterView(view: self)
         self.collectionViewConfig()
+        self.addData()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,10 +33,7 @@ class HomeViewController: UIViewController {
         self.buttonsStyle()
         self.tabBarStyle()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.addData()
-    }
+
     
     //MARK:- Methods
     private func buttonsStyle() {
