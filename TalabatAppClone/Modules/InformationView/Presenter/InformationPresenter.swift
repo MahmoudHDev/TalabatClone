@@ -24,7 +24,7 @@ class InformationPresenterView {
     
     init(view: InformationPresenterPr) {
         self.view = view
-    }
+    } 
     
     //MARK:- Methods
 

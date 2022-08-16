@@ -105,6 +105,7 @@ class InformationViewController: UIViewController {
     }
     
     @IBAction func seePassBttn() {
+        
         if canSeePass {
             passwordTextField.isSecureTextEntry = false
             seePasswordBtn.setImage(UIImage(systemName: "eye.fill")!, for: .normal)
@@ -124,7 +125,6 @@ class InformationViewController: UIViewController {
         print("register Button")
     }
     
-    
 }
 
 //MARK:- Presenter
@@ -138,6 +138,4 @@ extension InformationViewController : InformationPresenterPr {
         print("Password or username is not correct")
     }
     
-    
 }
-
