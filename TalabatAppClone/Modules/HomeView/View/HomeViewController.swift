@@ -9,29 +9,30 @@ import UIKit
 
 class HomeViewController: UIViewController {
     //MARK:- Outlets
-    @IBOutlet weak var offerLbl             : UILabel!
-    @IBOutlet weak var offerDescLbl         : UILabel!
-    @IBOutlet weak var offerBtn             : UIButton!
-    @IBOutlet weak var topCollectionView    : UICollectionView!
-    @IBOutlet weak var offersCollectionView : UICollectionView!
-
+    @IBOutlet weak var offerLbl                 : UILabel!
+    @IBOutlet weak var offerDescLbl             : UILabel!
+    @IBOutlet weak var offerBtn                 : UIButton!
+    @IBOutlet weak var topCollectionView        : UICollectionView!
+    @IBOutlet weak var topPicksCollectionView   : UICollectionView!
+    
     //MARK:- Properties
     var presenter       : HomePresenterView?
     var arrCatgories    = [CatgoriesModel]()
-    
+    var arrTopPicks     = [CatgoriesModel]()
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = HomePresenterView(view: self)
         self.collectionViewConfig()
         self.addData()
-
+        self.addDatatoTopPicks()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.buttonsStyle()
         self.tabBarStyle()
+        
     }
 
     
@@ -52,6 +53,18 @@ class HomeViewController: UIViewController {
             CatgoriesModel(title: "Talabat Mart", image: UIImage(named: "Market")!),
             CatgoriesModel(title: "Groceries", image: UIImage(named: "Grocery")!),
             CatgoriesModel(title: "More Shops", image: UIImage(named: "Shop")!)
+        ]
+    }
+    
+    private func addDatatoTopPicks() {
+        self.arrTopPicks = [
+            CatgoriesModel(title: "Past Orders", image: UIImage(named: "PastOrder")!),
+            CatgoriesModel(title: "Value Meals", image: UIImage(named: "Money")!),
+            CatgoriesModel(title: "Dessert Lovers", image: UIImage(named: "IceCream")!),
+            CatgoriesModel(title: "Pizza Lovers", image: UIImage(named: "Pizza")!),
+            CatgoriesModel(title: "Soft Drinks", image: UIImage(named: "Pepsi")!),
+            CatgoriesModel(title: "Hot Drinks", image: UIImage(named: "Coffee")!)
+
         ]
     }
     

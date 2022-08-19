@@ -18,20 +18,23 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         self.topCollectionView.register(CategoriesCollectionViewCell.myNib(), forCellWithReuseIdentifier: CategoriesCollectionViewCell.cellId)
         
-        // offersCollectionView
-        self.offersCollectionView.delegate       = self
-        self.offersCollectionView.dataSource     = self
         
-        self.offersCollectionView.register(OffersCollectionViewCell.myNib(), forCellWithReuseIdentifier: OffersCollectionViewCell.cellId)
+        // Top Picks CollectionView
+        topPicksCollectionView.delegate     = self
+        topPicksCollectionView.dataSource   = self
+        
+        topPicksCollectionView.register(TopPicksCVCell.myNib(), forCellWithReuseIdentifier: TopPicksCVCell.cellId)
+        
     }
     //MARK:- Data Source
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == topCollectionView {
+
             return arrCatgories.count
         }else{
-            return 1
+            return arrTopPicks.count
         }
         
     }
@@ -48,14 +51,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             return cell
             
         }else{
-            let cell = offersCollectionView.dequeueReusableCell(withReuseIdentifier: OffersCollectionViewCell.cellId, for: indexPath) as! OffersCollectionViewCell
-            
-            cell.setData(timer: "12:00", offerLbl: "Save up to EGP 75",
-                         offerDesc: "Limited time offer on resturants to try",
-                         img: UIImage(named: "Abstract")!)
+
+            let cell = topPicksCollectionView.dequeueReusableCell(withReuseIdentifier: TopPicksCVCell.cellId, for: indexPath) as! TopPicksCVCell
+            let title = arrTopPicks[indexPath.row].title ?? ""
+            let img = arrTopPicks[indexPath.row].image
+            print(title)
+            cell.setCell(imgView: img ?? UIImage(), title: title)
             
             return cell
-
         }
 
     }
