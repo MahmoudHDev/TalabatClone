@@ -15,7 +15,8 @@ class TopPicksCVCell: UICollectionViewCell {
     
     //MARK:- Properties
     static let cellId = "TopPicksCVCell"
-    
+    let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+
     //MARK:- Nibs
 
     override func awakeFromNib() {
@@ -34,8 +35,10 @@ class TopPicksCVCell: UICollectionViewCell {
     }
 
     private func cellStyle() {
-        imageContainerV.layer.cornerRadius = 20
-        imgView        .layer.cornerRadius = 20
+        imageContainerV.layer.cornerRadius  = 20
+        imgView        .layer.cornerRadius  = 20
+
+
         
     }
 }
