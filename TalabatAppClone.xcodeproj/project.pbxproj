@@ -35,6 +35,8 @@
 		1ED2AD5328ABDB0800DBA51C /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED2AD5128ABDB0800DBA51C /* CategoriesCollectionViewCell.xib */; };
 		1EDAB5B428B00CD8004EADF4 /* TopPicksCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAB5B228B00CD8004EADF4 /* TopPicksCVCell.swift */; };
 		1EDAB5B528B00CD8004EADF4 /* TopPicksCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAB5B328B00CD8004EADF4 /* TopPicksCVCell.xib */; };
+		1EDBDDB528B17AFA00C5AE96 /* DiscountsCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDBDDB328B17AFA00C5AE96 /* DiscountsCVCell.swift */; };
+		1EDBDDB628B17AFA00C5AE96 /* DiscountsCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDBDDB428B17AFA00C5AE96 /* DiscountsCVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		1ED2AD5128ABDB0800DBA51C /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		1EDAB5B228B00CD8004EADF4 /* TopPicksCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicksCVCell.swift; sourceTree = "<group>"; };
 		1EDAB5B328B00CD8004EADF4 /* TopPicksCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopPicksCVCell.xib; sourceTree = "<group>"; };
+		1EDBDDB328B17AFA00C5AE96 /* DiscountsCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsCVCell.swift; sourceTree = "<group>"; };
+		1EDBDDB428B17AFA00C5AE96 /* DiscountsCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsCVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +293,8 @@
 				1ED2AD5128ABDB0800DBA51C /* CategoriesCollectionViewCell.xib */,
 				1EDAB5B228B00CD8004EADF4 /* TopPicksCVCell.swift */,
 				1EDAB5B328B00CD8004EADF4 /* TopPicksCVCell.xib */,
+				1EDBDDB328B17AFA00C5AE96 /* DiscountsCVCell.swift */,
+				1EDBDDB428B17AFA00C5AE96 /* DiscountsCVCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				1E130AAA28A6C16200D098D0 /* Assets.xcassets in Resources */,
 				1ED2AD5328ABDB0800DBA51C /* CategoriesCollectionViewCell.xib in Resources */,
 				1E2C350028A7C41B004E6B87 /* Countries.storyboard in Resources */,
+				1EDBDDB628B17AFA00C5AE96 /* DiscountsCVCell.xib in Resources */,
 				1E2C34FB28A7A577004E6B87 /* Lunch.mp4 in Resources */,
 				1E130AA828A6C15E00D098D0 /* Main.storyboard in Resources */,
 			);
@@ -372,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8616F828AAACF300F85D4C /* User.swift in Sources */,
+				1EDBDDB528B17AFA00C5AE96 /* DiscountsCVCell.swift in Sources */,
 				1EACE57828ABF708007BBC64 /* CatgoriesModel.swift in Sources */,
 				1E130AA528A6C15E00D098D0 /* MainViewController.swift in Sources */,
 				1E162D5628A83007009A600A /* TextFieldPadding.swift in Sources */,

@@ -8,10 +8,28 @@
 import UIKit
 
 class DiscountsCVCell: UICollectionViewCell {
-
+    //MARK:- Outlets
+    @IBOutlet weak var img : UIImageView!
+    
+    //MARK:- Properties
+    static let cellId = "DiscountsCVCell"
+    
+    //MARK:- Nib
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.cellStyle()
     }
-
+    
+    //MARK:- Methods
+    static func myNib() -> UINib {
+        return UINib(nibName: "DiscountsCVCell", bundle: nil)
+    }
+    
+    private func cellStyle() {
+        self.img.layer.cornerRadius = 16
+    }
+    
+    func setCell(img: UIImage) {
+        self.img.image = img
+    }
 }

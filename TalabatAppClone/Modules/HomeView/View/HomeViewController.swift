@@ -14,11 +14,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var offerBtn                 : UIButton!
     @IBOutlet weak var topCollectionView        : UICollectionView!
     @IBOutlet weak var topPicksCollectionView   : UICollectionView!
+    @IBOutlet weak var discountsCollectionView  : UICollectionView!
+    @IBOutlet weak var slidePageControll        : UIPageControl!
     
     //MARK:- Properties
     var presenter       : HomePresenterView?
     var arrCatgories    = [CatgoriesModel]()
     var arrTopPicks     = [CatgoriesModel]()
+    var arrOffers       = [UIImage]()
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +29,15 @@ class HomeViewController: UIViewController {
         self.collectionViewConfig()
         self.addData()
         self.addDatatoTopPicks()
+        self.addOffers()
+        self.slideShowTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.buttonsStyle()
         self.tabBarStyle()
+
         
     }
 
@@ -68,6 +74,23 @@ class HomeViewController: UIViewController {
         ]
     }
     
+    private func addOffers() {
+        self.arrOffers = [
+        UIImage(named: "FirstOffer")!,
+            UIImage(named: "SecondOffer")!,
+            UIImage(named: "ThirdOffer")!
+        ]
+    }
+    
+    private func slideShowTimer() {
+        let timer = Timer(timeInterval: 0.4, repeats: true) { (myTimer) in
+            myTimer.invalidate()
+            
+            print("timer is firedUp")
+        }
+        
+        
+    }
     //MARK:- Actions
 
     @IBAction func offerBttn(_ sender: UIButton) {
@@ -77,7 +100,6 @@ class HomeViewController: UIViewController {
     
 }
 //MARK:- Presenter
-
 extension HomeViewController: HomePresenterPr {
     
     func dataDidLoad() {

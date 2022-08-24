@@ -25,16 +25,24 @@ extension HomeViewController: UICollectionViewDataSource {
         
         topPicksCollectionView.register(TopPicksCVCell.myNib(), forCellWithReuseIdentifier: TopPicksCVCell.cellId)
         
+        // Discounts CollectionView
+        discountsCollectionView.delegate    = self
+        discountsCollectionView.dataSource  = self
+        
+        discountsCollectionView.register(DiscountsCVCell.myNib(), forCellWithReuseIdentifier: DiscountsCVCell.cellId)
+        
     }
+    
     //MARK:- Data Source
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == topCollectionView {
-
             return arrCatgories.count
-        }else{
-            return arrTopPicks.count
+        }else if collectionView == topPicksCollectionView {
+            return self.arrTopPicks.count
+        }else {
+            return self.arrOffers.count
         }
         
     }
@@ -42,7 +50,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == topCollectionView {
-            let cell = topCollectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.cellId, for: indexPath) as! CategoriesCollectionViewCell
+            let cell    = topCollectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.cellId, for: indexPath) as! CategoriesCollectionViewCell
             
             let imgs    = self.arrCatgories[indexPath.row].image
             let title   = self.arrCatgories[indexPath.row].title
@@ -50,35 +58,24 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.setCell(img:(imgs ?? UIImage(systemName: "cloud"))!, title: title ?? "No Name")
             return cell
             
-        }else{
+        }else if collectionView == topPicksCollectionView {
 
-            let cell = topPicksCollectionView.dequeueReusableCell(withReuseIdentifier: TopPicksCVCell.cellId, for: indexPath) as! TopPicksCVCell
-            let title = arrTopPicks[indexPath.row].title ?? ""
-            let img = arrTopPicks[indexPath.row].image
+            let cell    = topPicksCollectionView.dequeueReusableCell(withReuseIdentifier: TopPicksCVCell.cellId, for: indexPath) as! TopPicksCVCell
+            let title   = arrTopPicks[indexPath.row].title ?? ""
+            let img     = arrTopPicks[indexPath.row].image
             cell.setCell(imgView: img ?? UIImage(), title: title)
+            
+            return cell
+        }else{
+            let cell = discountsCollectionView.dequeueReusableCell(withReuseIdentifier: DiscountsCVCell.cellId, for: indexPath) as! DiscountsCVCell
+            let imgs = arrOffers[indexPath.row]
+            cell.setCell(img: imgs)
             
             return cell
         }
 
     }
 }
-
-//MARK:- UICollectionView Delegate Flow Layout
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == topCollectionView {
-            
-            return CGSize(width: 120, height: 150)
-        }else {
-            return CGSize(width: 100, height: 150)
-        }
-        
-    }
-    
-}
-
 
 //MARK:- Delegate
 extension HomeViewController: UICollectionViewDelegate {

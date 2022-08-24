@@ -36,9 +36,6 @@ class TopPicksCVCell: UICollectionViewCell {
 
     private func cellStyle() {
         imageContainerV.layer.cornerRadius  = 20
-        imgView        .layer.cornerRadius  = 20
-
-
         
     }
 }
