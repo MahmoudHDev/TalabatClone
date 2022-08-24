@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     var arrCatgories    = [CatgoriesModel]()
     var arrTopPicks     = [CatgoriesModel]()
     var arrOffers       = [UIImage]()
+    var runCounts       = 0
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,13 +84,24 @@ class HomeViewController: UIViewController {
     }
     
     private func slideShowTimer() {
-        let timer = Timer(timeInterval: 0.4, repeats: true) { (myTimer) in
-            myTimer.invalidate()
-            
-            print("timer is firedUp")
+        
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        timer.fire()
+    }
+    
+    @objc
+    
+    func fireTimer(timer: Timer) {
+        runCounts += 1
+        if runCounts >= self.arrOffers.count + 1 {
+            timer.invalidate()
+            print("Repeat the sequence \(runCounts)")
+
+        }else{
+            print("Alarm has been stopped \(runCounts)")
+
         }
-        
-        
+
     }
     //MARK:- Actions
 
