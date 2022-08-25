@@ -10,39 +10,58 @@ import UIKit
 extension HomeViewController: UICollectionViewDataSource {
     //MARK:- Cell Config
 
-    func collectionViewConfig() {
+    func topCollectionViewConfig() {
         
         // Top collectionView
         self.topCollectionView.delegate      = self
         self.topCollectionView.dataSource    = self
-        
+        // Nibs
         self.topCollectionView.register(CategoriesCollectionViewCell.myNib(), forCellWithReuseIdentifier: CategoriesCollectionViewCell.cellId)
-        
-        
+    }
+    
+
+    func topPicksCollectionViewConfig() {
         // Top Picks CollectionView
         topPicksCollectionView.delegate     = self
         topPicksCollectionView.dataSource   = self
-        
+        // Nibs
         topPicksCollectionView.register(TopPicksCVCell.myNib(), forCellWithReuseIdentifier: TopPicksCVCell.cellId)
-        
+    }
+    
+    func discountsCollectionViewConfig() {
         // Discounts CollectionView
         discountsCollectionView.delegate    = self
         discountsCollectionView.dataSource  = self
-        
+        // Nibs
         discountsCollectionView.register(DiscountsCVCell.myNib(), forCellWithReuseIdentifier: DiscountsCVCell.cellId)
         slidePageControl.numberOfPages = arrOffers.count
+        
+
+    }
+    
+    func brandsCollectionViewConfig() {
+        
+        self.brandsCollectionView.dataSource = self
+        self.brandsCollectionView.delegate   = self
+        
+        self.brandsCollectionView.register(BrandsCollectionVC.myNib(), forCellWithReuseIdentifier: BrandsCollectionVC.cellId)
+        
+        
     }
     
     //MARK:- Data Source
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         if collectionView == topCollectionView {
             return arrCatgories.count
         }else if collectionView == topPicksCollectionView {
             return self.arrTopPicks.count
-        }else {
+        }else if collectionView == discountsCollectionView {
             return self.arrOffers.count
+        }else {
+            return self.arrBrands.count
         }
         
     }
@@ -66,10 +85,20 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.setCell(imgView: img ?? UIImage(), title: title)
             
             return cell
-        }else{
+        }else if collectionView == discountsCollectionView {
             let cell = discountsCollectionView.dequeueReusableCell(withReuseIdentifier: DiscountsCVCell.cellId, for: indexPath) as! DiscountsCVCell
             let imgs = arrOffers[indexPath.row]
             cell.setCell(img: imgs)
+            
+            return cell
+        }else{
+            let cell = brandsCollectionView.dequeueReusableCell(withReuseIdentifier: BrandsCollectionVC.cellId, for: indexPath) as! BrandsCollectionVC
+            
+            let img         = arrBrands[indexPath.row].img ?? UIImage()
+            let title       = arrBrands[indexPath.row].title ?? "No Name"
+            let duration    = arrBrands[indexPath.row].duration ?? "0 min"
+            
+            cell.setCell(img: img, title: title, titleDesc: duration)
             
             return cell
         }
@@ -79,8 +108,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
 //MARK:- CollectionView Delegate Flow LayOut
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
-
-
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == topCollectionView {

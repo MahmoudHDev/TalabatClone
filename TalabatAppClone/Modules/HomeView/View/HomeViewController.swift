@@ -15,23 +15,34 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topCollectionView        : UICollectionView!
     @IBOutlet weak var topPicksCollectionView   : UICollectionView!
     @IBOutlet weak var discountsCollectionView  : UICollectionView!
-    @IBOutlet weak var slidePageControl        : UIPageControl!
+    @IBOutlet weak var brandsCollectionView     : UICollectionView!
+    @IBOutlet weak var slidePageControl         : UIPageControl!
     
     //MARK:- Properties
     var presenter       : HomePresenterView?
     var arrCatgories    = [CatgoriesModel]()
     var arrTopPicks     = [CatgoriesModel]()
+    var arrBrands       = [BrandsModel]()
     var arrOffers       = [UIImage]()
     var runCounts:Int   = 0
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Presenter
         presenter = HomePresenterView(view: self)
-        self.collectionViewConfig()
+        
+        // collectionView Configuration
+        self.topCollectionViewConfig()
+        self.brandsCollectionViewConfig()
+        self.discountsCollectionViewConfig()
+        self.topPicksCollectionViewConfig()
+        
+        // Add Data to collectionViews
         self.addData()
         self.addDatatoTopPicks()
         self.addOffers()
+        self.addBrands()
         self.slideShowTimer()
         
     }
@@ -54,7 +65,8 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
-    
+    //MARK:- Data
+
     private func addData() {
         arrCatgories = [
             CatgoriesModel(title: "Food", image: UIImage(named: "Burger")!),
@@ -81,6 +93,17 @@ class HomeViewController: UIViewController {
             UIImage(named: "FirstOffer")!,
             UIImage(named: "SecondOffer")!,
             UIImage(named: "ThirdOffer")!
+        ]
+    }
+    
+    private func addBrands() {
+        self.arrBrands = [
+            BrandsModel(img: UIImage(named: "Alabd")!, title: "El Abd", duration: "33 min"),
+            BrandsModel(img: UIImage(named: "BuffaloBurger")!, title: "Buffalo Burger", duration: "40 min"),
+            BrandsModel(img: UIImage(named: "Etoile")!, title: "Etoile", duration: "60 min"),
+            BrandsModel(img: UIImage(named: "Hardees")!, title: "Hardees", duration: "1 hour"),
+            BrandsModel(img: UIImage(named: "KFC")!, title: "KFC", duration: "1h 33 min"),
+            BrandsModel(img: UIImage(named: "PapaJohns")!, title: "Papa Johns", duration: "2h 0 min")
         ]
     }
     
