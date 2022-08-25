@@ -30,7 +30,7 @@ extension HomeViewController: UICollectionViewDataSource {
         discountsCollectionView.dataSource  = self
         
         discountsCollectionView.register(DiscountsCVCell.myNib(), forCellWithReuseIdentifier: DiscountsCVCell.cellId)
-        
+        slidePageControl.numberOfPages = arrOffers.count
     }
     
     //MARK:- Data Source
@@ -75,6 +75,24 @@ extension HomeViewController: UICollectionViewDataSource {
         }
 
     }
+}
+
+//MARK:- CollectionView Delegate Flow LayOut
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == topCollectionView {
+            return 10
+        }else if collectionView == topPicksCollectionView {
+            return 10
+        }else {
+          return 0
+        }
+    }
+    
+    
 }
 
 //MARK:- Delegate

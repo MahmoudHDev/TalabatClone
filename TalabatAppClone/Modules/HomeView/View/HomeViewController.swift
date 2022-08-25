@@ -15,14 +15,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topCollectionView        : UICollectionView!
     @IBOutlet weak var topPicksCollectionView   : UICollectionView!
     @IBOutlet weak var discountsCollectionView  : UICollectionView!
-    @IBOutlet weak var slidePageControll        : UIPageControl!
+    @IBOutlet weak var slidePageControl        : UIPageControl!
     
     //MARK:- Properties
     var presenter       : HomePresenterView?
     var arrCatgories    = [CatgoriesModel]()
     var arrTopPicks     = [CatgoriesModel]()
     var arrOffers       = [UIImage]()
-    var runCounts       = 0
+    var runCounts:Int   = 0
+    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,13 @@ class HomeViewController: UIViewController {
         self.addDatatoTopPicks()
         self.addOffers()
         self.slideShowTimer()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.buttonsStyle()
         self.tabBarStyle()
-
         
     }
 
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController {
     
     private func addOffers() {
         self.arrOffers = [
-        UIImage(named: "FirstOffer")!,
+            UIImage(named: "FirstOffer")!,
             UIImage(named: "SecondOffer")!,
             UIImage(named: "ThirdOffer")!
         ]
@@ -85,23 +86,24 @@ class HomeViewController: UIViewController {
     
     private func slideShowTimer() {
         
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         timer.fire()
     }
     
     @objc
-    
     func fireTimer(timer: Timer) {
-        runCounts += 1
-        if runCounts >= self.arrOffers.count + 1 {
-            timer.invalidate()
-            print("Repeat the sequence \(runCounts)")
+        if runCounts < self.arrOffers.count  {
 
+            print("index is \(runCounts)")
+            
+            discountsCollectionView.scrollToItem(at: IndexPath(item: runCounts, section: 0), at: .centeredHorizontally, animated: true)
+            runCounts += 1
         }else{
+            runCounts = 0
             print("Alarm has been stopped \(runCounts)")
 
         }
-
+        slidePageControl.currentPage = runCounts
     }
     //MARK:- Actions
 
