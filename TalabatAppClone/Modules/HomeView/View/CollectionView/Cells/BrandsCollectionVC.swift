@@ -29,7 +29,7 @@ class BrandsCollectionVC: UICollectionViewCell {
     }
     
     private func cellStyle() {
-//        containerV.layer.cornerRadius = 16
+        img.layer.cornerRadius = 16
     }
     
     func setCell(img: UIImage, title: String, titleDesc: String) {

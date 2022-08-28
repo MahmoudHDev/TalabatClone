@@ -104,6 +104,7 @@ class HomeViewController: UIViewController {
             BrandsModel(img: UIImage(named: "Hardees")!, title: "Hardees", duration: "1 hour"),
             BrandsModel(img: UIImage(named: "KFC")!, title: "KFC", duration: "1h 33 min"),
             BrandsModel(img: UIImage(named: "PapaJohns")!, title: "Papa Johns", duration: "2h 0 min")
+            
         ]
     }
     
