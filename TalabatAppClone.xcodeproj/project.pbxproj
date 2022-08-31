@@ -30,9 +30,9 @@
 		1E2CC88128A98EEB000C0C51 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */; };
 		1E2CE55928BF89DA002B2201 /* MyAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */; };
 		1E2CE55D28BF8A62002B2201 /* MyAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */; };
+		1E700D9628BF945100E27673 /* MyAddress+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E700D9528BF945100E27673 /* MyAddress+LocationManager.swift */; };
 		1E73A3F828B7B3360041E260 /* BrandsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73A3F728B7B3360041E260 /* BrandsModel.swift */; };
 		1E8616F828AAACF300F85D4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8616F728AAACF300F85D4C /* User.swift */; };
-		1E98724228BF742F002C252A /* Main+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98724128BF742F002C252A /* Main+LocationManager.swift */; };
 		1EA351E128BD05EF00C11342 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA351E028BD05EF00C11342 /* SearchViewController.swift */; };
 		1EA351E728BD06E900C11342 /* Search+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA351E628BD06E900C11342 /* Search+TableView.swift */; };
 		1EA351EA28BD0AC700C11342 /* Search+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA351E928BD0AC700C11342 /* Search+TextField.swift */; };
@@ -78,9 +78,9 @@
 		1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressViewController.swift; sourceTree = "<group>"; };
 		1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAddress.storyboard; sourceTree = "<group>"; };
+		1E700D9528BF945100E27673 /* MyAddress+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAddress+LocationManager.swift"; sourceTree = "<group>"; };
 		1E73A3F728B7B3360041E260 /* BrandsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsModel.swift; sourceTree = "<group>"; };
 		1E8616F728AAACF300F85D4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		1E98724128BF742F002C252A /* Main+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+LocationManager.swift"; sourceTree = "<group>"; };
 		1EA351E028BD05EF00C11342 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1EA351E628BD06E900C11342 /* Search+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search+TableView.swift"; sourceTree = "<group>"; };
 		1EA351E928BD0AC700C11342 /* Search+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search+TextField.swift"; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				1E130AA428A6C15E00D098D0 /* MainViewController.swift */,
-				1E98724128BF742F002C252A /* Main+LocationManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */,
+				1E700D9528BF945100E27673 /* MyAddress+LocationManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -567,7 +567,6 @@
 				1EACE57828ABF708007BBC64 /* CatgoriesModel.swift in Sources */,
 				1EA351E728BD06E900C11342 /* Search+TableView.swift in Sources */,
 				1EA351EA28BD0AC700C11342 /* Search+TextField.swift in Sources */,
-				1E98724228BF742F002C252A /* Main+LocationManager.swift in Sources */,
 				1E130AA528A6C15E00D098D0 /* MainViewController.swift in Sources */,
 				1E2CE55928BF89DA002B2201 /* MyAddressViewController.swift in Sources */,
 				1E162D5628A83007009A600A /* TextFieldPadding.swift in Sources */,
@@ -585,6 +584,7 @@
 				1E73A3F828B7B3360041E260 /* BrandsModel.swift in Sources */,
 				1E2C351028A7D43E004E6B87 /* CountriesModel.swift in Sources */,
 				1E2C350A28A7C6BC004E6B87 /* CountriesTableViewCell.swift in Sources */,
+				1E700D9628BF945100E27673 /* MyAddress+LocationManager.swift in Sources */,
 				1EB0045428BF3555009341B7 /* SearchTableViewCell.swift in Sources */,
 				1ED2AD4E28ABD8F500DBA51C /* Home+CollectionView.swift in Sources */,
 				1EDAB5B428B00CD8004EADF4 /* TopPicksCVCell.swift in Sources */,

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreLocation
 import AVKit
 import AVFoundation
 
@@ -21,13 +20,11 @@ class MainViewController: UIViewController {
     let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Lunch", ofType: "mp4")!))
     var platerLooper    : AVPlayerLooper!
     var queuePlayer     : AVQueuePlayer!
-    var locationManager = CLLocationManager()
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUI()
-        self.locationManagerConfig()
         
         navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.isHidden = true
@@ -65,9 +62,6 @@ class MainViewController: UIViewController {
     
     //MARK:- Actions
     @IBAction private func autoLocationBtn(_ sender: UIButton) {
-     print("CLocationManager")
-        locationManager.startUpdatingLocation()
-        
         let storyBoard = UIStoryboard(name: "MyAddress", bundle: nil).instantiateViewController(identifier: "AddressView")
         
         self.navigationController?.pushViewController(storyBoard, animated: true)
@@ -75,7 +69,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction private func manualLocationBtn(_ sender: UIButton) {
-        print("Show Maps")
         let storyBoard = UIStoryboard(name: "Countries", bundle: nil).instantiateViewController(identifier: "CountriesView")
 
         self.navigationController?.pushViewController(storyBoard, animated: true)

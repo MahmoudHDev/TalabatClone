@@ -11,16 +11,19 @@ import GoogleMaps
 class MyAddressViewController: UIViewController {
 
     //MARK:- Outlets
-    @IBOutlet weak var gmaps:GMSMapView!
+    @IBOutlet weak var gmaps: GMSMapView!
     
     //MARK:- Properties
-
-
+    let ceo             : CLGeocoder = CLGeocoder()
+    let marker          = GMSMarker()
+    let locationManager = CLLocationManager()
+    
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navBarStyle()
-        // Do any additional setup after loading the view.
+        self.locationManagerConfig()
+
     }
     
     //MARK:- Methods
