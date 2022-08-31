@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnO-ce-QSg" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EzG-Te-vEa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EzG-Te-vEa" firstAttribute="trailing" secondItem="mnO-ce-QSg" secondAttribute="trailing" id="PCL-Ca-iay"/>
-                            <constraint firstItem="mnO-ce-QSg" firstAttribute="top" secondItem="EzG-Te-vEa" secondAttribute="top" id="cQT-AZ-pm1"/>
-                            <constraint firstItem="EzG-Te-vEa" firstAttribute="bottom" secondItem="mnO-ce-QSg" secondAttribute="bottom" id="eLV-JP-Azn"/>
-                            <constraint firstItem="mnO-ce-QSg" firstAttribute="leading" secondItem="EzG-Te-vEa" secondAttribute="leading" id="oeU-dp-rPq"/>
+                            <constraint firstItem="mnO-ce-QSg" firstAttribute="top" secondItem="EzG-Te-vEa" secondAttribute="top" constant="50" id="6QJ-uN-CBh"/>
+                            <constraint firstItem="mnO-ce-QSg" firstAttribute="trailing" secondItem="EzG-Te-vEa" secondAttribute="trailing" id="QTS-6F-5nD"/>
+                            <constraint firstItem="mnO-ce-QSg" firstAttribute="leading" secondItem="EzG-Te-vEa" secondAttribute="leading" id="T8a-Hr-rBH"/>
+                            <constraint firstItem="mnO-ce-QSg" firstAttribute="bottom" secondItem="EzG-Te-vEa" secondAttribute="bottom" id="hBg-Ko-Apb"/>
                         </constraints>
                     </view>
                     <connections>

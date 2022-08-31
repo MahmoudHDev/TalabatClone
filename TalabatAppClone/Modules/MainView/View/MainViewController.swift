@@ -69,6 +69,7 @@ class MainViewController: UIViewController {
         locationManager.startUpdatingLocation()
         
         let storyBoard = UIStoryboard(name: "MyAddress", bundle: nil).instantiateViewController(identifier: "AddressView")
+        
         self.navigationController?.pushViewController(storyBoard, animated: true)
         
     }
