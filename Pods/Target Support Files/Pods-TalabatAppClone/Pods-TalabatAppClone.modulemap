@@ -1,6 +1,0 @@
-framework module Pods_TalabatAppClone {
-  umbrella header "Pods-TalabatAppClone-umbrella.h"
-
-  export *
-  module * { export * }
-}
