@@ -44,6 +44,7 @@ class ContriesTableViewController: UITableViewController {
         title = "Choose the country"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         navigationController?.navigationBar.backgroundColor = .systemRed
+        
     }
 
     // MARK: - Table view data source

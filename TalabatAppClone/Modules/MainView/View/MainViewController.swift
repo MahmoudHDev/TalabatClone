@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 import AVKit
 import AVFoundation
 
@@ -18,16 +19,19 @@ class MainViewController: UIViewController {
     
     //MARK:- Properties
     let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Lunch", ofType: "mp4")!))
-    var platerLooper: AVPlayerLooper!
-    var queuePlayer : AVQueuePlayer!
+    var platerLooper    : AVPlayerLooper!
+    var queuePlayer     : AVQueuePlayer!
+    var locationManager = CLLocationManager()
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUI()
+        self.locationManagerConfig()
+        
         navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.isHidden = true
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,20 +52,25 @@ class MainViewController: UIViewController {
     }
     
     private func basicPlayer() {
+        let layer           = AVPlayerLayer(player: player)
 
         player.isMuted      = true
-        let layer           = AVPlayerLayer(player: player)
         layer.frame         = topView.bounds
         layer.videoGravity  = .resizeAspectFill
         topView.layer.addSublayer(layer)
         player.play()
     }
     
+    
+    
     //MARK:- Actions
-
     @IBAction private func autoLocationBtn(_ sender: UIButton) {
      print("CLocationManager")
-        // Detect the location and insert it to the phone number
+        locationManager.startUpdatingLocation()
+        
+        let storyBoard = UIStoryboard(name: "MyAddress", bundle: nil).instantiateViewController(identifier: "AddressView")
+        self.navigationController?.pushViewController(storyBoard, animated: true)
+        
     }
     
     @IBAction private func manualLocationBtn(_ sender: UIButton) {
@@ -72,4 +81,5 @@ class MainViewController: UIViewController {
     }
 
 }
+
 

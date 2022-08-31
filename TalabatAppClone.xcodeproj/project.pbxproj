@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,9 +28,17 @@
 		1E2CC87B28A98C13000C0C51 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC87A28A98C13000C0C51 /* HomeViewController.swift */; };
 		1E2CC87E28A98D5F000C0C51 /* InformationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC87D28A98D5F000C0C51 /* InformationPresenter.swift */; };
 		1E2CC88128A98EEB000C0C51 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */; };
+		1E2CE55928BF89DA002B2201 /* MyAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */; };
+		1E2CE55D28BF8A62002B2201 /* MyAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */; };
 		1E73A3F828B7B3360041E260 /* BrandsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73A3F728B7B3360041E260 /* BrandsModel.swift */; };
 		1E8616F828AAACF300F85D4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8616F728AAACF300F85D4C /* User.swift */; };
+		1E98724228BF742F002C252A /* Main+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98724128BF742F002C252A /* Main+LocationManager.swift */; };
+		1EA351E128BD05EF00C11342 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA351E028BD05EF00C11342 /* SearchViewController.swift */; };
+		1EA351E728BD06E900C11342 /* Search+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA351E628BD06E900C11342 /* Search+TableView.swift */; };
+		1EA351EA28BD0AC700C11342 /* Search+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA351E928BD0AC700C11342 /* Search+TextField.swift */; };
 		1EACE57828ABF708007BBC64 /* CatgoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EACE57728ABF708007BBC64 /* CatgoriesModel.swift */; };
+		1EB0045428BF3555009341B7 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB0045228BF3555009341B7 /* SearchTableViewCell.swift */; };
+		1EB0045528BF3555009341B7 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB0045328BF3555009341B7 /* SearchTableViewCell.xib */; };
 		1ED2AD4E28ABD8F500DBA51C /* Home+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED2AD4D28ABD8F500DBA51C /* Home+CollectionView.swift */; };
 		1ED2AD5228ABDB0800DBA51C /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED2AD5028ABDB0800DBA51C /* CategoriesCollectionViewCell.swift */; };
 		1ED2AD5328ABDB0800DBA51C /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED2AD5128ABDB0800DBA51C /* CategoriesCollectionViewCell.xib */; };
@@ -40,9 +48,11 @@
 		1EDBDDB628B17AFA00C5AE96 /* DiscountsCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDBDDB428B17AFA00C5AE96 /* DiscountsCVCell.xib */; };
 		1EEA3EC428B772AA0011326D /* BrandsCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA3EC228B772AA0011326D /* BrandsCollectionVC.swift */; };
 		1EEA3EC528B772AA0011326D /* BrandsCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EEA3EC328B772AA0011326D /* BrandsCollectionVC.xib */; };
+		27E891BD9F5B463841A9E3B4 /* Pods_TalabatAppClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683B3E0E7411BAF73A4BE892 /* Pods_TalabatAppClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E7A867B4D5A3D2229210AE5 /* Pods-TalabatAppClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalabatAppClone.debug.xcconfig"; path = "Target Support Files/Pods-TalabatAppClone/Pods-TalabatAppClone.debug.xcconfig"; sourceTree = "<group>"; };
 		1E130A9D28A6C15E00D098D0 /* TalabatAppClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalabatAppClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E130AA028A6C15E00D098D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E130AA228A6C15E00D098D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +76,17 @@
 		1E2CC87A28A98C13000C0C51 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1E2CC87D28A98D5F000C0C51 /* InformationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPresenter.swift; sourceTree = "<group>"; };
 		1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressViewController.swift; sourceTree = "<group>"; };
+		1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAddress.storyboard; sourceTree = "<group>"; };
 		1E73A3F728B7B3360041E260 /* BrandsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsModel.swift; sourceTree = "<group>"; };
 		1E8616F728AAACF300F85D4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1E98724128BF742F002C252A /* Main+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main+LocationManager.swift"; sourceTree = "<group>"; };
+		1EA351E028BD05EF00C11342 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1EA351E628BD06E900C11342 /* Search+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search+TableView.swift"; sourceTree = "<group>"; };
+		1EA351E928BD0AC700C11342 /* Search+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Search+TextField.swift"; sourceTree = "<group>"; };
 		1EACE57728ABF708007BBC64 /* CatgoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatgoriesModel.swift; sourceTree = "<group>"; };
+		1EB0045228BF3555009341B7 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1EB0045328BF3555009341B7 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		1ED2AD4D28ABD8F500DBA51C /* Home+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CollectionView.swift"; sourceTree = "<group>"; };
 		1ED2AD5028ABDB0800DBA51C /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		1ED2AD5128ABDB0800DBA51C /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -78,6 +96,8 @@
 		1EDBDDB428B17AFA00C5AE96 /* DiscountsCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsCVCell.xib; sourceTree = "<group>"; };
 		1EEA3EC228B772AA0011326D /* BrandsCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsCollectionVC.swift; sourceTree = "<group>"; };
 		1EEA3EC328B772AA0011326D /* BrandsCollectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandsCollectionVC.xib; sourceTree = "<group>"; };
+		683B3E0E7411BAF73A4BE892 /* Pods_TalabatAppClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TalabatAppClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		910784B4FA9FACDDAD8411A6 /* Pods-TalabatAppClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TalabatAppClone.release.xcconfig"; path = "Target Support Files/Pods-TalabatAppClone/Pods-TalabatAppClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E891BD9F5B463841A9E3B4 /* Pods_TalabatAppClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +117,8 @@
 			children = (
 				1E130A9F28A6C15E00D098D0 /* TalabatAppClone */,
 				1E130A9E28A6C15E00D098D0 /* Products */,
+				DCB2733515499A7B4B36232C /* Pods */,
+				60913192B8DD67C6A4E9335E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,10 +157,12 @@
 		1E130AB628A6C23A00D098D0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1E2CE55428BF899E002B2201 /* MyAddressView */,
 				1E130ABE28A6C31A00D098D0 /* MainView */,
 				1E2C350228A7C444004E6B87 /* CountriesView */,
 				1E162D4928A82638009A600A /* InformationView */,
 				1E2CC87228A985B9000C0C51 /* HomeView */,
+				1EA351DF28BD05BD00C11342 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -159,6 +184,7 @@
 				1E2C34FF28A7C41B004E6B87 /* Countries.storyboard */,
 				1E162D5128A82698009A600A /* Information.storyboard */,
 				1E2CC87728A98BF0000C0C51 /* Home.storyboard */,
+				1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -167,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				1E130AA428A6C15E00D098D0 /* MainViewController.swift */,
+				1E98724128BF742F002C252A /* Main+LocationManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,12 +303,96 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		1E2CE55428BF899E002B2201 /* MyAddressView */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CE55728BF89BA002B2201 /* Model */,
+				1E2CE55628BF89B3002B2201 /* View */,
+				1E2CE55528BF89AB002B2201 /* Presenter */,
+			);
+			path = MyAddressView;
+			sourceTree = "<group>";
+		};
+		1E2CE55528BF89AB002B2201 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1E2CE55628BF89B3002B2201 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E2CE55728BF89BA002B2201 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1E8616F628AAACE200F85D4C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				1E8616F728AAACF300F85D4C /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1EA351DF28BD05BD00C11342 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1EA351E528BD063C00C11342 /* Model */,
+				1EA351E428BD062F00C11342 /* View */,
+				1EA351E328BD062100C11342 /* Presenter */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1EA351E328BD062100C11342 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1EA351E428BD062F00C11342 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EA351E028BD05EF00C11342 /* SearchViewController.swift */,
+				1EA351E928BD0AC700C11342 /* Search+TextField.swift */,
+				1EB0045128BF351C009341B7 /* TableView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1EA351E528BD063C00C11342 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EB0045128BF351C009341B7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				1EA351E628BD06E900C11342 /* Search+TableView.swift */,
+				1EB0045928BF3602009341B7 /* Cells */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		1EB0045928BF3602009341B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1EB0045228BF3555009341B7 /* SearchTableViewCell.swift */,
+				1EB0045328BF3555009341B7 /* SearchTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		1ED2AD4C28ABD8DC00DBA51C /* CollectionView */ = {
@@ -308,6 +419,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		60913192B8DD67C6A4E9335E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				683B3E0E7411BAF73A4BE892 /* Pods_TalabatAppClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCB2733515499A7B4B36232C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E7A867B4D5A3D2229210AE5 /* Pods-TalabatAppClone.debug.xcconfig */,
+				910784B4FA9FACDDAD8411A6 /* Pods-TalabatAppClone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,9 +443,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E130AB128A6C16300D098D0 /* Build configuration list for PBXNativeTarget "TalabatAppClone" */;
 			buildPhases = (
+				BF87A222DEEDB2A7E71684B7 /* [CP] Check Pods Manifest.lock */,
 				1E130A9928A6C15E00D098D0 /* Sources */,
 				1E130A9A28A6C15E00D098D0 /* Frameworks */,
 				1E130A9B28A6C15E00D098D0 /* Resources */,
+				A454A7EAD030BEBB64E409AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,12 +506,56 @@
 				1ED2AD5328ABDB0800DBA51C /* CategoriesCollectionViewCell.xib in Resources */,
 				1E2C350028A7C41B004E6B87 /* Countries.storyboard in Resources */,
 				1EDBDDB628B17AFA00C5AE96 /* DiscountsCVCell.xib in Resources */,
+				1EB0045528BF3555009341B7 /* SearchTableViewCell.xib in Resources */,
+				1E2CE55D28BF8A62002B2201 /* MyAddress.storyboard in Resources */,
 				1E2C34FB28A7A577004E6B87 /* Lunch.mp4 in Resources */,
 				1E130AA828A6C15E00D098D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A454A7EAD030BEBB64E409AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TalabatAppClone/Pods-TalabatAppClone-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TalabatAppClone/Pods-TalabatAppClone-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TalabatAppClone/Pods-TalabatAppClone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF87A222DEEDB2A7E71684B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TalabatAppClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E130A9928A6C15E00D098D0 /* Sources */ = {
@@ -391,7 +565,11 @@
 				1E8616F828AAACF300F85D4C /* User.swift in Sources */,
 				1EDBDDB528B17AFA00C5AE96 /* DiscountsCVCell.swift in Sources */,
 				1EACE57828ABF708007BBC64 /* CatgoriesModel.swift in Sources */,
+				1EA351E728BD06E900C11342 /* Search+TableView.swift in Sources */,
+				1EA351EA28BD0AC700C11342 /* Search+TextField.swift in Sources */,
+				1E98724228BF742F002C252A /* Main+LocationManager.swift in Sources */,
 				1E130AA528A6C15E00D098D0 /* MainViewController.swift in Sources */,
+				1E2CE55928BF89DA002B2201 /* MyAddressViewController.swift in Sources */,
 				1E162D5628A83007009A600A /* TextFieldPadding.swift in Sources */,
 				1E130AA128A6C15E00D098D0 /* AppDelegate.swift in Sources */,
 				1E2CC88128A98EEB000C0C51 /* HomePresenter.swift in Sources */,
@@ -403,9 +581,11 @@
 				1EEA3EC428B772AA0011326D /* BrandsCollectionVC.swift in Sources */,
 				1E2C350628A7C490004E6B87 /* ContriesTableViewController.swift in Sources */,
 				1E130AA328A6C15E00D098D0 /* SceneDelegate.swift in Sources */,
+				1EA351E128BD05EF00C11342 /* SearchViewController.swift in Sources */,
 				1E73A3F828B7B3360041E260 /* BrandsModel.swift in Sources */,
 				1E2C351028A7D43E004E6B87 /* CountriesModel.swift in Sources */,
 				1E2C350A28A7C6BC004E6B87 /* CountriesTableViewCell.swift in Sources */,
+				1EB0045428BF3555009341B7 /* SearchTableViewCell.swift in Sources */,
 				1ED2AD4E28ABD8F500DBA51C /* Home+CollectionView.swift in Sources */,
 				1EDAB5B428B00CD8004EADF4 /* TopPicksCVCell.swift in Sources */,
 			);
@@ -551,6 +731,7 @@
 		};
 		1E130AB228A6C16300D098D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7A867B4D5A3D2229210AE5 /* Pods-TalabatAppClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -570,6 +751,7 @@
 		};
 		1E130AB328A6C16300D098D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 910784B4FA9FACDDAD8411A6 /* Pods-TalabatAppClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

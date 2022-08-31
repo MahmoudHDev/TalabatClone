@@ -268,7 +268,7 @@
         <!--Search-->
         <scene sceneID="YOP-cg-ABl">
             <objects>
-                <viewController id="aPi-WH-VSu" sceneMemberID="viewController">
+                <viewController id="aPi-WH-VSu" customClass="SearchViewController" customModule="TalabatAppClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D2T-qT-CVg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,7 +279,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dy1-Y1-63W">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lLy-9S-L0g">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lLy-9S-L0g">
                                                 <rect key="frame" x="0.0" y="44" width="320" height="411"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
@@ -321,10 +321,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="4mk-ku-A3I"/>
+                    <connections>
+                        <outlet property="searchTableView" destination="lLy-9S-L0g" id="jpB-6P-Tby"/>
+                        <outlet property="searchTextField" destination="PFv-tQ-qe4" id="Qew-Ia-feV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDh-PT-gHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259" y="143"/>
+            <point key="canvasLocation" x="2451" y="143"/>
         </scene>
         <!--Search-->
         <scene sceneID="3bD-tT-Vxw">
@@ -343,7 +347,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="its-mK-Y2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2345.625" y="142.6056338028169"/>
+            <point key="canvasLocation" x="1641" y="143"/>
         </scene>
     </scenes>
     <resources>
