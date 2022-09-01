@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eMw-pg-Nuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656.25" y="142.6056338028169"/>
+            <point key="canvasLocation" x="647" y="635"/>
         </scene>
         <!--Home-->
         <scene sceneID="s4y-GT-rSC">
@@ -259,6 +259,7 @@
                     <connections>
                         <segue destination="tl4-uP-7xX" kind="relationship" relationship="viewControllers" id="dG4-Bh-o1l"/>
                         <segue destination="mHP-fk-FX8" kind="relationship" relationship="viewControllers" id="ItG-pI-LwH"/>
+                        <segue destination="k8x-kq-VmI" kind="relationship" relationship="viewControllers" id="hjF-V3-TKC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O7x-Vd-FZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -328,13 +329,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDh-PT-gHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2451" y="143"/>
+            <point key="canvasLocation" x="2597" y="143"/>
+        </scene>
+        <!--Manage Account-->
+        <scene sceneID="vCc-FO-Erw">
+            <objects>
+                <viewController id="lqy-Cm-0Vc" customClass="ManageAccountViewController" customModule="TalabatAppClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNs-x8-NXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBi-1X-jYl">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tde-36-6YZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manage Account View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOc-BU-Uio">
+                                                <rect key="frame" x="75" y="227" width="170" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tde-36-6YZ" firstAttribute="width" secondItem="aBi-1X-jYl" secondAttribute="width" id="65m-bu-X9O"/>
+                                    <constraint firstItem="Tde-36-6YZ" firstAttribute="leading" secondItem="aBi-1X-jYl" secondAttribute="leading" id="KG9-iB-ZST"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tde-36-6YZ" secondAttribute="bottom" id="Nmc-1X-LQS"/>
+                                    <constraint firstItem="Tde-36-6YZ" firstAttribute="top" secondItem="aBi-1X-jYl" secondAttribute="top" id="nMS-W8-MNV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tde-36-6YZ" secondAttribute="trailing" id="sie-1f-iRG"/>
+                                    <constraint firstItem="Tde-36-6YZ" firstAttribute="height" secondItem="aBi-1X-jYl" secondAttribute="height" priority="250" id="wzb-DU-Mde"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JlY-z1-hms"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JlY-z1-hms" firstAttribute="trailing" secondItem="aBi-1X-jYl" secondAttribute="trailing" id="7xr-N3-ZUI"/>
+                            <constraint firstItem="aBi-1X-jYl" firstAttribute="leading" secondItem="JlY-z1-hms" secondAttribute="leading" id="9Vj-uE-aQE"/>
+                            <constraint firstItem="aBi-1X-jYl" firstAttribute="top" secondItem="JlY-z1-hms" secondAttribute="top" id="aCV-ZI-Osl"/>
+                            <constraint firstItem="JlY-z1-hms" firstAttribute="bottom" secondItem="aBi-1X-jYl" secondAttribute="bottom" id="kXx-3G-T0L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Account" id="jo0-53-a5N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88q-ag-syg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4273" y="143"/>
         </scene>
         <!--Search-->
         <scene sceneID="3bD-tT-Vxw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mHP-fk-FX8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" selectedImage="magnifyingglass" catalog="system" id="P1I-i8-aR0"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="P1I-i8-aR0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rc3-mK-gzp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -347,13 +398,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="its-mK-Y2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="143"/>
+            <point key="canvasLocation" x="1802" y="143"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="Akr-FX-1w1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k8x-kq-VmI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" selectedImage="person.fill" id="Cld-9b-cnL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="slb-nj-qAp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lqy-Cm-0Vc" kind="relationship" relationship="rootViewController" id="aaY-dO-d9D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgF-mt-iiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3592.5" y="142.6056338028169"/>
         </scene>
     </scenes>
     <resources>
         <image name="Chefs Background" width="8257" height="3028"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

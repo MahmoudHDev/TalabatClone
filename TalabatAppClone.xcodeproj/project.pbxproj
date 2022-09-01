@@ -30,6 +30,7 @@
 		1E2CC88128A98EEB000C0C51 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */; };
 		1E2CE55928BF89DA002B2201 /* MyAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */; };
 		1E2CE55D28BF8A62002B2201 /* MyAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */; };
+		1E41348B28C0A2ED0083A6F5 /* ManageAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E41348A28C0A2ED0083A6F5 /* ManageAccountViewController.swift */; };
 		1E700D9628BF945100E27673 /* MyAddress+LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E700D9528BF945100E27673 /* MyAddress+LocationManager.swift */; };
 		1E73A3F828B7B3360041E260 /* BrandsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E73A3F728B7B3360041E260 /* BrandsModel.swift */; };
 		1E8616F828AAACF300F85D4C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8616F728AAACF300F85D4C /* User.swift */; };
@@ -78,6 +79,7 @@
 		1E2CC88028A98EEB000C0C51 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		1E2CE55828BF89DA002B2201 /* MyAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressViewController.swift; sourceTree = "<group>"; };
 		1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyAddress.storyboard; sourceTree = "<group>"; };
+		1E41348A28C0A2ED0083A6F5 /* ManageAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewController.swift; sourceTree = "<group>"; };
 		1E700D9528BF945100E27673 /* MyAddress+LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyAddress+LocationManager.swift"; sourceTree = "<group>"; };
 		1E73A3F728B7B3360041E260 /* BrandsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsModel.swift; sourceTree = "<group>"; };
 		1E8616F728AAACF300F85D4C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				1E162D4928A82638009A600A /* InformationView */,
 				1E2CC87228A985B9000C0C51 /* HomeView */,
 				1EA351DF28BD05BD00C11342 /* Search */,
+				1E41348528C0A2A50083A6F5 /* ManageAccountView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -182,9 +185,9 @@
 				1E130AAB28A6C16200D098D0 /* LaunchScreen.storyboard */,
 				1E130AA628A6C15E00D098D0 /* Main.storyboard */,
 				1E2C34FF28A7C41B004E6B87 /* Countries.storyboard */,
+				1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */,
 				1E162D5128A82698009A600A /* Information.storyboard */,
 				1E2CC87728A98BF0000C0C51 /* Home.storyboard */,
-				1E2CE55C28BF8A62002B2201 /* MyAddress.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -329,6 +332,38 @@
 			sourceTree = "<group>";
 		};
 		1E2CE55728BF89BA002B2201 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1E41348528C0A2A50083A6F5 /* ManageAccountView */ = {
+			isa = PBXGroup;
+			children = (
+				1E41348828C0A2CB0083A6F5 /* Model */,
+				1E41348728C0A2C60083A6F5 /* View */,
+				1E41348628C0A2C00083A6F5 /* Presenter */,
+			);
+			path = ManageAccountView;
+			sourceTree = "<group>";
+		};
+		1E41348628C0A2C00083A6F5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1E41348728C0A2C60083A6F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E41348A28C0A2ED0083A6F5 /* ManageAccountViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1E41348828C0A2CB0083A6F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -567,6 +602,7 @@
 				1EACE57828ABF708007BBC64 /* CatgoriesModel.swift in Sources */,
 				1EA351E728BD06E900C11342 /* Search+TableView.swift in Sources */,
 				1EA351EA28BD0AC700C11342 /* Search+TextField.swift in Sources */,
+				1E41348B28C0A2ED0083A6F5 /* ManageAccountViewController.swift in Sources */,
 				1E130AA528A6C15E00D098D0 /* MainViewController.swift in Sources */,
 				1E2CE55928BF89DA002B2201 /* MyAddressViewController.swift in Sources */,
 				1E162D5628A83007009A600A /* TextFieldPadding.swift in Sources */,

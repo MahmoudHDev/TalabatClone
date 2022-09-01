@@ -78,12 +78,12 @@ class HomeViewController: UIViewController {
     
     private func addDatatoTopPicks() {
         self.arrTopPicks = [
-            CatgoriesModel(title: "Past Orders", image: UIImage(named: "PastOrder")!),
-            CatgoriesModel(title: "Value Meals", image: UIImage(named: "Money")!),
+            CatgoriesModel(title: "Past Orders",    image: UIImage(named: "PastOrder")!),
+            CatgoriesModel(title: "Value Meals",    image: UIImage(named: "Money")!),
             CatgoriesModel(title: "Dessert Lovers", image: UIImage(named: "IceCream")!),
-            CatgoriesModel(title: "Pizza Lovers", image: UIImage(named: "Pizza")!),
-            CatgoriesModel(title: "Soft Drinks", image: UIImage(named: "Pepsi")!),
-            CatgoriesModel(title: "Hot Drinks", image: UIImage(named: "Coffee")!)
+            CatgoriesModel(title: "Pizza Lovers",   image: UIImage(named: "Pizza")!),
+            CatgoriesModel(title: "Soft Drinks",    image: UIImage(named: "Pepsi")!),
+            CatgoriesModel(title: "Hot Drinks",     image: UIImage(named: "Coffee")!)
 
         ]
     }
